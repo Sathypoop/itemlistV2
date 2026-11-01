@@ -4,12 +4,12 @@ title: Shop
 ---
 
 <div class="tab">
-    <button class="tablinks" onclick="changeTab(event, 'items')"
-        id="defaultOpen">{{- site.data.language.str_items -}}</button>
+    <button class="tablinks" onclick="changeTab(event, 'items')" id="defaultOpen">{{- site.data.language.str_items
+        -}}</button>
     <button class="tablinks" onclick="changeTab(event, 'events')">{{- site.data.language.str_events -}}</button>
     <button class="tablinks" onclick="changeTab(event, 'traits')">{{- site.data.language.str_traits -}}</button>
     <button class="tablinks" onclick="changeTab(event, 'races')">{{- site.data.language.str_races -}}</button>
-	<button class="tablinks" onclick="changeTab(event, 'weapons')">{{- site.data.language.str_weapons -}}</button>
+    <button class="tablinks" onclick="changeTab(event, 'weapons')">{{- site.data.language.str_weapons -}}</button>
     <button class="tablinks" onclick="changeTab(event, 'apparel')">{{- site.data.language.str_apparel -}}</button>
     <button class="tablinks" onclick="changeTab(event, 'medical')">{{- site.data.language.str_medical -}}</button>
     <button class="tablinks" onclick="changeTab(event, 'furniture')">{{- site.data.language.str_furniture -}}</button>
@@ -32,7 +32,7 @@ title: Shop
         {%- for item in site.data.StoreItems.items -%}
         {%- if item.price >= 0 -%}
         <tr>
-            
+
             <td style="text-align:center;">{{- item.abr -}}</td>
             <td style="text-align:center;">{{- item.price -}}</td>
             <td style="text-align:center;">{{- item.category -}}</td>
@@ -52,40 +52,40 @@ title: Shop
             <th style="text-align:center;" width="20%">Name</th>
             <th style="text-align:center;" width="10%">Cost</th>
             <th style="text-align:center;" width="20%">Category</th>
-                        
+
         </tr>
 
         {%- for item in site.data.StoreItems.items -%}
-        {%- if item.price >= 0 
-               and item.category == site.data.language.str_Ranged_Weapons
-                or item.category == site.data.language.str_Melee_Weapons
-                or item.category == site.data.language.str_AR.
-                or item.category == site.data.language.str_BAS
-              or item.category == site.data.language.str_DMR
-              or item.category == site.data.language.str_LMG
-              or item.category == site.data.language.str_Pistol
-              or item.category == site.data.language.str_Shotgun
-              or item.category == site.data.language.str_SMG
-              or item.category == site.data.language.str_Spacer
-              or item.category == site.data.language.str_Wands
-              or item.category == site.data.language.str_SpecialWeapon
-              or item.category == site.data.language.str_Shield
-              or item.category == site.data.language.str_MagicFoci
-              or item.category == site.data.language.str_HeyranWep
-              or item.category == site.data.language.str_ArcaneHammer
-              or item.category == site.data.language.str_ArcaneStave
-              or item.category == site.data.language.str_ArcaneSpear
-              or item.category == site.data.language.str_ArcaneSword
-              or item.category == site.data.language.str_ArcaneGreatS
-              or item.category == site.data.language.str_ArcaneBow
-              or item.category == site.data.language.str_ArcaneBAxe
-              
+        {%- if item.price >= 0
+        and item.category == site.data.language.str_Ranged_Weapons
+        or item.category == site.data.language.str_Melee_Weapons
+        or item.category == site.data.language.str_AR.
+        or item.category == site.data.language.str_BAS
+        or item.category == site.data.language.str_DMR
+        or item.category == site.data.language.str_LMG
+        or item.category == site.data.language.str_Pistol
+        or item.category == site.data.language.str_Shotgun
+        or item.category == site.data.language.str_SMG
+        or item.category == site.data.language.str_Spacer
+        or item.category == site.data.language.str_Wands
+        or item.category == site.data.language.str_SpecialWeapon
+        or item.category == site.data.language.str_Shield
+        or item.category == site.data.language.str_MagicFoci
+        or item.category == site.data.language.str_HeyranWep
+        or item.category == site.data.language.str_ArcaneHammer
+        or item.category == site.data.language.str_ArcaneStave
+        or item.category == site.data.language.str_ArcaneSpear
+        or item.category == site.data.language.str_ArcaneSword
+        or item.category == site.data.language.str_ArcaneGreatS
+        or item.category == site.data.language.str_ArcaneBow
+        or item.category == site.data.language.str_ArcaneBAxe
+
         -%}
         <tr>
             <td style="text-align:center;">{{- item.abr -}}</td>
             <td style="text-align:center;">{{- item.price -}}</td>
             <td style="text-align:center;">{{- item.category -}}</td>
-            
+
         </tr>
         {%- endif -%}
         {%- endfor -%}
@@ -98,34 +98,34 @@ title: Shop
 
     <table style="display: table" class="sortable">
         <tr>
-            <th  style="text-align:center;" >Name</th>
-            <th  style="text-align:center;">Cost</th>
-            <th  style="text-align:center;">Category</th>
+            <th style="text-align:center;">Name</th>
+            <th style="text-align:center;">Cost</th>
+            <th style="text-align:center;">Category</th>
         </tr>
 
         {%- for item in site.data.StoreItems.items -%}
-        {%- if item.price >= 0 
-               and item.category == site.data.language.str_apparel 
-                or item.category == site.data.language.str_MagicApp
-                or item.category == site.data.language.str_Accessories
-                or item.category == site.data.language.str_Armor
-                or item.category == site.data.language.str_Loadbearing_Gear
-                or item.category == site.data.language.str_Magic_Equip
-                or item.category == site.data.language.str_Body_Gear
-                or item.category == site.data.language.str_Footwear
-                or item.category == site.data.language.str_Headgear
-                or item.category == site.data.language.str_Noble_Apparel
-                or item.category == site.data.language.str_BA
-                or item.category == site.data.language.str_CJ
-                or item.category == site.data.language.str_Helmet
-                or item.category == site.data.language.str_OuterGear
-                or item.category == site.data.language.str_HeyraApp
-                or item.category == site.data.language.str_HeyraHead
+        {%- if item.price >= 0
+        and item.category == site.data.language.str_apparel
+        or item.category == site.data.language.str_MagicApp
+        or item.category == site.data.language.str_Accessories
+        or item.category == site.data.language.str_Armor
+        or item.category == site.data.language.str_Loadbearing_Gear
+        or item.category == site.data.language.str_Magic_Equip
+        or item.category == site.data.language.str_Body_Gear
+        or item.category == site.data.language.str_Footwear
+        or item.category == site.data.language.str_Headgear
+        or item.category == site.data.language.str_Noble_Apparel
+        or item.category == site.data.language.str_BA
+        or item.category == site.data.language.str_CJ
+        or item.category == site.data.language.str_Helmet
+        or item.category == site.data.language.str_OuterGear
+        or item.category == site.data.language.str_HeyraApp
+        or item.category == site.data.language.str_HeyraHead
         -%}
         <tr>
-            <td  style="text-align:center;">{{- item.abr -}}</td>
-            <td  style="text-align:center;">{{- item.price -}}</td>
-            <td  style="text-align:center;">{{- item.category -}}</td>
+            <td style="text-align:center;">{{- item.abr -}}</td>
+            <td style="text-align:center;">{{- item.price -}}</td>
+            <td style="text-align:center;">{{- item.category -}}</td>
         </tr>
         {%- endif -%}
         {%- endfor -%}
@@ -144,17 +144,17 @@ title: Shop
         </tr>
 
         {%- for item in site.data.StoreItems.items -%}
-        {%- if item.price >= 0 
-               and item.category == site.data.language.str_Animal_body_Part 
-                or item.category == site.data.language.str_Archotech
-                or item.category == site.data.language.str_Bionic
-                or item.abr == site.data.language.str_HealerMechSerum
-                or item.abr == site.data.language.str_RessurectorMechSerum
-                or item.category == site.data.language.str_Medicine
-                or item.category == site.data.language.str_Natural
-                or item.category == site.data.language.str_Prostethic
-                or item.category == site.data.language.str_SimpleParts
-                or item.category == site.data.language.str_Ultratech
+        {%- if item.price >= 0
+        and item.category == site.data.language.str_Animal_body_Part
+        or item.category == site.data.language.str_Archotech
+        or item.category == site.data.language.str_Bionic
+        or item.abr == site.data.language.str_HealerMechSerum
+        or item.abr == site.data.language.str_RessurectorMechSerum
+        or item.category == site.data.language.str_Medicine
+        or item.category == site.data.language.str_Natural
+        or item.category == site.data.language.str_Prostethic
+        or item.category == site.data.language.str_SimpleParts
+        or item.category == site.data.language.str_Ultratech
         -%}
         <tr>
             <td style="text-align:center;">{{- item.abr -}}</td>
@@ -168,7 +168,7 @@ title: Shop
 </div>
 
 <div id="animal" class="tabcontent">
-   <!-- <input type="text" class="search" id="animalInput" onkeyup="filterTable('animals')"
+    <!-- <input type="text" class="search" id="animalInput" onkeyup="filterTable('animals')"
         placeholder="{{- site.data.language.str_animal_search -}}"> -->
 
     <table style="display: table" class="sortable">
@@ -179,8 +179,8 @@ title: Shop
         </tr>
 
         {%- for item in site.data.StoreItems.items -%}
-        {%- if item.price >= 0 
-               and item.category == site.data.language.str_animal 
+        {%- if item.price >= 0
+        and item.category == site.data.language.str_animal
         -%}
         <tr>
             <td style="text-align:center;">{{- item.abr -}}</td>
@@ -205,29 +205,29 @@ title: Shop
         </tr>
 
         {%- for item in site.data.StoreItems.items -%}
-        {%- if item.price >= 0 
-               and item.category == site.data.language.str_Animal_Feed 
-                or item.category == site.data.language.str_Eggs_Fert
-                or item.category == site.data.language.str_Eggs_Unfert
-                or item.category == site.data.language.str_Fine_Meals
-                or item.category == site.data.language.str_Foods
-                or item.category == site.data.language.str_Fruits
-                or item.category == site.data.language.str_Garden_Alcohol
-                or item.category == site.data.language.str_Garden_Soda
-                or item.category == site.data.language.str_Ingredients
-                or item.category == site.data.language.str_Lavish_Meals
-                or item.category == site.data.language.str_MRE_Rations
-                or item.category == site.data.language.str_Meals
-                or item.category == site.data.language.str_Processed_fruits
-                or item.category == site.data.language.str_Processed_grains
-                or item.category == site.data.language.str_Processed_meat
-                or item.category == site.data.language.str_Processed_Sweets
-                or item.category == site.data.language.str_raw_fish
-	            or item.category == site.data.language.str_vege	    
-                or item.category == site.data.language.str_simple_meals
-                or item.category == site.data.language.str_snacks
-                or item.category == site.data.language.str_sweets
-        
+        {%- if item.price >= 0
+        and item.category == site.data.language.str_Animal_Feed
+        or item.category == site.data.language.str_Eggs_Fert
+        or item.category == site.data.language.str_Eggs_Unfert
+        or item.category == site.data.language.str_Fine_Meals
+        or item.category == site.data.language.str_Foods
+        or item.category == site.data.language.str_Fruits
+        or item.category == site.data.language.str_Garden_Alcohol
+        or item.category == site.data.language.str_Garden_Soda
+        or item.category == site.data.language.str_Ingredients
+        or item.category == site.data.language.str_Lavish_Meals
+        or item.category == site.data.language.str_MRE_Rations
+        or item.category == site.data.language.str_Meals
+        or item.category == site.data.language.str_Processed_fruits
+        or item.category == site.data.language.str_Processed_grains
+        or item.category == site.data.language.str_Processed_meat
+        or item.category == site.data.language.str_Processed_Sweets
+        or item.category == site.data.language.str_raw_fish
+        or item.category == site.data.language.str_vege
+        or item.category == site.data.language.str_simple_meals
+        or item.category == site.data.language.str_snacks
+        or item.category == site.data.language.str_sweets
+
         -%}
         <tr>
             <td style="text-align:center;">{{- item.abr -}}</td>
@@ -242,7 +242,7 @@ title: Shop
 
 
 <div id="drugs" class="tabcontent">
-   <!-- <input type="text" class="search" id="animalInput" onkeyup="filterTable('drugs')"
+    <!-- <input type="text" class="search" id="animalInput" onkeyup="filterTable('drugs')"
         placeholder="{{- site.data.language.str_drugs_search -}}"> -->
 
     <table style="display: table" class="sortable">
@@ -253,12 +253,12 @@ title: Shop
         </tr>
 
         {%- for item in site.data.StoreItems.items -%}
-        {%- if item.price >= 0 
-               and item.category == site.data.language.str_drugs 
-                or item.category == site.data.language.str_alcohol_precursor
-                or item.category == site.data.language.str_plant_matter
-                or item.category == site.data.language.str_Garden_Alcohol
-                or item.category == site.data.language.str_DNET
+        {%- if item.price >= 0
+        and item.category == site.data.language.str_drugs
+        or item.category == site.data.language.str_alcohol_precursor
+        or item.category == site.data.language.str_plant_matter
+        or item.category == site.data.language.str_Garden_Alcohol
+        or item.category == site.data.language.str_DNET
         -%}
         <tr>
             <td style="text-align:center;">{{- item.abr -}}</td>
@@ -272,7 +272,7 @@ title: Shop
 </div>
 
 <div id="furniture" class="tabcontent">
-   <!-- <input type="text" class="search" id="furnitureInput" onkeyup="filterTable('furniture')"
+    <!-- <input type="text" class="search" id="furnitureInput" onkeyup="filterTable('furniture')"
         placeholder="{{- site.data.language.str_furniture_search -}}"> -->
 
     <table style="display: table" class="sortable">
@@ -283,12 +283,12 @@ title: Shop
         </tr>
 
         {%- for item in site.data.StoreItems.items -%}
-        {%- if item.price >= 0 
-               and item.category == site.data.language.str_furniture 
-                or item.category == site.data.language.str_Hygiene
-                or item.category == site.data.language.str_Misc
-                or item.category == site.data.language.str_Trophy
-                or item.category == site.data.language.str_Lime_Art
+        {%- if item.price >= 0
+        and item.category == site.data.language.str_furniture
+        or item.category == site.data.language.str_Hygiene
+        or item.category == site.data.language.str_Misc
+        or item.category == site.data.language.str_Trophy
+        or item.category == site.data.language.str_Lime_Art
         -%}
         <tr>
             <td style="text-align:center;">{{- item.abr -}}</td>
@@ -296,7 +296,7 @@ title: Shop
             <td style="text-align:center;">{{- item.category -}}</td>
 
         </tr>
-        
+
         {%- endif -%}
         {%- endfor -%}
     </table>
@@ -304,7 +304,7 @@ title: Shop
 
 
 <div id="events" class="tabcontent">
-   <!-- <input type="text" class="search" id="eventsInput" onkeyup="filterTable('events')"
+    <!-- <input type="text" class="search" id="eventsInput" onkeyup="filterTable('events')"
         placeholder="{{- site.data.language.str_events_search -}}"> -->
 
     <table style="display: table" class="sortable">
@@ -333,15 +333,15 @@ title: Shop
 </div>
 
 <div id="traits" class="tabcontent">
-   <!--  <input type="text" class="search" id="traitsInput" onkeyup="filterTable('traits')"
+    <!--  <input type="text" class="search" id="traitsInput" onkeyup="filterTable('traits')"
         placeholder="{{- site.data.language.str_traits_search -}}"> -->
 
     <table style="display: table" class="sortable">
         <tr>
             <th style="text-align:center;">Name</th>
             <th style="text-align:center;">Description</th>
-            <th  style="text-align:center;"style="width: 15%">Add Cost</th>
-            <th  style="text-align:center;"style="width: 15%">Remove Cost</th>
+            <th style="text-align:center;" style="width: 15%">Add Cost</th>
+            <th style="text-align:center;" style="width: 15%">Remove Cost</th>
         </tr>
 
         {%- for item in site.data.ShopExt.traits -%}
@@ -389,11 +389,11 @@ title: Shop
 
 <div id="races" class="tabcontent">
     <input type="text" class="search" id="racesInput" onkeyup="filterTable('races')"
-        placeholder="{{- site.data.language.str_races_search -}}"> 
+        placeholder="{{- site.data.language.str_races_search -}}">
 
     <table style="display: table" class="sortable">
         <tr>
-            <th style="text-align:center; "width="15%">Name</th>
+            <th style="text-align:center; " width="15%">Name</th>
             <th style="text-align:center;">Cost</th>
         </tr>
 
@@ -439,8 +439,7 @@ title: Shop
         price = 0;
         priceSearch = 1;
 
-        if (filter.startsWith("CATEGORY:") && category == "items") 
-		{
+        if (filter.startsWith("CATEGORY:") && category == "items") {
             filter = filter.substring("category".length + 1);
             column = 2;
         }
